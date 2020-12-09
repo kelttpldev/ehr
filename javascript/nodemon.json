@@ -1,0 +1,9 @@
+{
+    "ignore": [
+        "*Admin.js",
+        "permissions/*",
+        "main.js",
+        "org1-wallet",
+        "org2-wallet"
+    ]
+}

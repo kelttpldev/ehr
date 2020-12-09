@@ -1,0 +1,59 @@
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "Patient1",
+  "password":"patient1",
+  "type" : "patient"
+}
+
+### To get health record 
+GET http://localhost:3000/record
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwibmFtZSI6IlBhdGllbnQxIiwicm9sZSI6ImJhc2ljIiwicGFzc3dvcmQiOiJwYXRpZW50MSIsInR5cGUiOiJwYXRpZW50Iiwib3JnIjoiT3JnMSIsImNoYW5uZWwiOiJjaGFubmVsMSIsImFjY2Vzc19pZCI6IlBhdGllbnQxIiwiaWF0IjoxNjA1NzgxNTMyfQ.0sNsP2XoRPB1IxcT3Dl2o6aLHJ6rRmcFUIuIQan_bwU
+
+
+### To update health record
+
+POST http://localhost:3000/update
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwibmFtZSI6IlBhdGllbnQxIiwicm9sZSI6ImJhc2ljIiwicGFzc3dvcmQiOiJwYXRpZW50MSIsInR5cGUiOiJwYXRpZW50Iiwib3JnIjoiT3JnMSIsImNoYW5uZWwiOiJjaGFubmVsMSIsImFjY2Vzc19pZCI6IlBhdGllbnQxIiwiaWF0IjoxNjA1NzgxNTMyfQ.0sNsP2XoRPB1IxcT3Dl2o6aLHJ6rRmcFUIuIQan_bwU
+
+{
+  "field": "name",
+  "value": "Patient1"
+}
+
+### To get updated health record 
+GET http://localhost:3000/record
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwibmFtZSI6IlBhdGllbnQxIiwicm9sZSI6ImJhc2ljIiwicGFzc3dvcmQiOiJwYXRpZW50MSIsInR5cGUiOiJwYXRpZW50Iiwib3JnIjoiT3JnMSIsImNoYW5uZWwiOiJjaGFubmVsMSIsImFjY2Vzc19pZCI6IlBhdGllbnQxIiwiaWF0IjoxNjA1NzgxNTMyfQ.0sNsP2XoRPB1IxcT3Dl2o6aLHJ6rRmcFUIuIQan_bwU
+
+
+### Try to update restricted field
+
+POST http://localhost:3000/update
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwibmFtZSI6IlBhdGllbnQxIiwicm9sZSI6ImJhc2ljIiwicGFzc3dvcmQiOiJwYXRpZW50MSIsInR5cGUiOiJwYXRpZW50Iiwib3JnIjoiT3JnMSIsImNoYW5uZWwiOiJjaGFubmVsMSIsImFjY2Vzc19pZCI6IlBhdGllbnQxIiwiaWF0IjoxNjA1NzgxNTMyfQ.0sNsP2XoRPB1IxcT3Dl2o6aLHJ6rRmcFUIuIQan_bwU
+
+{
+  "field": "lastvisit",
+  "value": "['22-Mar-2019','33-Sep-2019s']"
+}
+
+### To check the last attempt
+GET http://localhost:3000/record
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwibmFtZSI6IlBhdGllbnQxIiwicm9sZSI6ImJhc2ljIiwicGFzc3dvcmQiOiJwYXRpZW50MSIsInR5cGUiOiJwYXRpZW50Iiwib3JnIjoiT3JnMSIsImNoYW5uZWwiOiJjaGFubmVsMSIsImFjY2Vzc19pZCI6IlBhdGllbnQxIiwiaWF0IjoxNjA1NzgxNTMyfQ.0sNsP2XoRPB1IxcT3Dl2o6aLHJ6rRmcFUIuIQan_bwU
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

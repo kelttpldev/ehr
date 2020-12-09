@@ -1,0 +1,27 @@
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "userId": 5,
+  "password":"doctor1"
+}
+
+### To get health record 
+GET http://localhost:3000/record
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6IkRvY3RvcjEiLCJyb2xlIjoiYmFzaWMiLCJwYXNzd29yZCI6ImRvY3RvcjEiLCJ0eXBlIjoiZG9jdG9yIiwib3JnIjoiT3JnMiIsImNoYW5uZWwiOiJjaGFubmVsMSIsImFjY2Vzc19pZCI6IlBhdGllbnQxIiwiaWF0IjoxNjA0Mzk5NDc1fQ.v8UZWWlaZV4xf4MyuQQoBUvsVlTvJFpC819Af5ql5sg
+
+
+### To update health record
+
+POST http://localhost:3000/update
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6IkRvY3RvcjEiLCJyb2xlIjoiYmFzaWMiLCJwYXNzd29yZCI6ImRvY3RvcjEiLCJ0eXBlIjoiZG9jdG9yIiwib3JnIjoiT3JnMiIsImNoYW5uZWwiOiJjaGFubmVsMSIsImFjY2Vzc19pZCI6IlBhdGllbnQxIiwiaWF0IjoxNjA0Mzk5NDc1fQ.v8UZWWlaZV4xf4MyuQQoBUvsVlTvJFpC819Af5ql5sg
+
+{
+  "field": "lastvisit",
+  "value": "[]"
+}
+
+### To get updated health record 
+GET http://localhost:3000/record
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6IkRvY3RvcjEiLCJyb2xlIjoiYmFzaWMiLCJwYXNzd29yZCI6ImRvY3RvcjEiLCJ0eXBlIjoiZG9jdG9yIiwib3JnIjoiT3JnMiIsImNoYW5uZWwiOiJjaGFubmVsMSIsImFjY2Vzc19pZCI6IlBhdGllbnQxIiwiaWF0IjoxNjA0Mzk5NDc1fQ.v8UZWWlaZV4xf4MyuQQoBUvsVlTvJFpC819Af5ql5sg
